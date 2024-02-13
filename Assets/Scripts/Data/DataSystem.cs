@@ -5,7 +5,7 @@ public class DataSystem
 {
 	public int currentPlayerGameProgress;
 	public int rubies;
-	public bool trainingNeed;
+	public bool guide;
 	public bool musicVolumeEnabled;
 	public bool effectsVolumeEnabled;
 	public bool[] shopUpgradesBought;
@@ -15,7 +15,7 @@ public class DataSystem
 		var newData = new DataSystem();
 		newData.currentPlayerGameProgress = currentPlayerGameProgress;
 		newData.rubies = rubies;
-		newData.trainingNeed = trainingNeed;
+		newData.guide = guide;
 		newData.musicVolumeEnabled = musicVolumeEnabled;
 		newData.effectsVolumeEnabled = effectsVolumeEnabled;
 		newData.shopUpgradesBought = shopUpgradesBought;
