@@ -7,8 +7,8 @@ public class SoundsSystem : MonoBehaviour
 
     private void Awake()
     {
-        var others = FindObjectsOfType<SoundsSystem>();
-        var mine = others.FirstOrDefault(x => x.gameObject.scene.name == "DontDestroyOnLoad");
+        var soundSystems = GameObject.FindGameObjectsWithTag("SoundSystem");
+        var mine = soundSystems.FirstOrDefault(x => x.gameObject.scene.name == "DontDestroyOnLoad");
 
         if (mine != null && mine != this)
         {
@@ -26,10 +26,10 @@ public class SoundsSystem : MonoBehaviour
         audioSource.enabled = DataSystemController.DataSystemValues.musicVolumeEnabled;
     }
 
-    public void IncreaseMusicValue(float value)
+    public void Enabled(bool value)
     {
-        audioSource.volume += value;
-        audioSource.enabled = DataSystemController.DataSystemValues.musicVolumeEnabled = audioSource.enabled;
+        audioSource.enabled = value;
+        DataSystemController.DataSystemValues.musicVolumeEnabled = value;
         DataSystemController.SaveSystemValues();
     }
 }
