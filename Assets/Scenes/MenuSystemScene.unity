@@ -2467,7 +2467,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: health upgrade
+  m_text: BALL SIZES
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7b40aea0ba76b9e4fa93eac25cfaa251, type: 2}
   m_sharedMaterial: {fileID: -1506563456910404497, guid: 7b40aea0ba76b9e4fa93eac25cfaa251, type: 2}
@@ -5756,7 +5756,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: health upgrade
+  m_text: jump force
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7b40aea0ba76b9e4fa93eac25cfaa251, type: 2}
   m_sharedMaterial: {fileID: -1506563456910404497, guid: 7b40aea0ba76b9e4fa93eac25cfaa251, type: 2}
@@ -6534,7 +6534,7 @@ MonoBehaviour:
   defaultValues:
     currentPlayerGameProgress: 1
     rubies: 35
-    trainingNeed: 1
+    guide: 1
     musicVolumeEnabled: 1
     effectsVolumeEnabled: 1
     shopUpgradesBought: 0000

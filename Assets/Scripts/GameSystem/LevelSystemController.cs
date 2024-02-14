@@ -10,7 +10,9 @@ public class LevelSystemController : MonoBehaviour
 	[SerializeField] private GuideController guide;
 	[SerializeField] private LoseGameScreen loseGameScreen;
 	[SerializeField] private TMP_Text scoreTMPText;
+	[SerializeField] private TMP_Text currentPlayerLevelCaption;
 	[SerializeField] private Image progresBar;
+	[SerializeField] private PlayerSpring playerSpring;
 
 	public static Vector2 SizeOfScreen;
 	private int levelCompleteGoal;
@@ -25,8 +27,10 @@ public class LevelSystemController : MonoBehaviour
 
 	private void Start()
 	{
+		currentPlayerLevelCaption.text = DataSystemController.DataSystemValues.currentPlayerGameProgress.ToString();
 		levelCompleteGoal = (int)(2 * Mathf.Log(DataSystemController.DataSystemValues.currentPlayerGameProgress + 1) + 2);
 		rubies = (int)(3 * Mathf.Log(DataSystemController.DataSystemValues.currentPlayerGameProgress + 1 + 1) + 3 + DataSystemController.DataSystemValues.currentPlayerGameProgress + 1);
+		ReloadProgressBar();
 
 		bool guideNeeded = DataSystemController.DataSystemValues.guide;
 
@@ -68,26 +72,32 @@ public class LevelSystemController : MonoBehaviour
 
 	private void GameStartedHandler()
 	{
-
+		playerSpring.OnJumpSuccess += OnPlayerJumpSuccess;
+		playerSpring.OnDestroyed += OnPlayerDestroyed;
+		playerSpring.ProvideControls();
 	}
 
-	private void OnPlayerGotScoreHandler()
+	private void OnPlayerJumpSuccess()
 	{
 		playerScore += 1;
 		if (playerScore >= levelCompleteGoal)
 		{
-			// TODO
+			playerSpring.OnJumpSuccess -= OnPlayerJumpSuccess;
+			playerSpring.OnDestroyed -= OnPlayerDestroyed;
 
 			loseGameScreen.ShowWindowEnd(rubies, "you win!", "you lose...");
 			DataSystemController.DataSystemValues.currentPlayerGameProgress += 1;
 			DataSystemController.DataSystemValues.rubies += rubies;
 			DataSystemController.SaveSystemValues();
 		}
+
+		ReloadProgressBar();
 	}
 
-	private void OnPlayerCrashedHandler()
+	private void OnPlayerDestroyed()
 	{
-		// TODO
+		playerSpring.OnJumpSuccess -= OnPlayerJumpSuccess;
+		playerSpring.OnDestroyed -= OnPlayerDestroyed;
 
 		loseGameScreen.ShowWindowEnd(0, "you win!", "you lose...");
 	}
