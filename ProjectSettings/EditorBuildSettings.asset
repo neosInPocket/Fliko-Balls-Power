@@ -11,4 +11,49 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameSystemScene.unity
     guid: 7259d34fb6888d745adb63b30e239417
+  - enabled: 1
+    path: Assets/Scenes/SpringContraprionScene.unity
+    guid: 78e458bccbcaae94db30aeb66c9c33be
+  - enabled: 1
+    path: Assets/Scenes/SpringContraprionScene 1.unity
+    guid: bee893d663d75834a9a86ebd64a85fcb
+  - enabled: 1
+    path: Assets/Scenes/SpringContraprionScene 2.unity
+    guid: af2ce0a4794306e4a8c09e04ef045d58
+  - enabled: 1
+    path: Assets/Scenes/SpringContraprionScene 3.unity
+    guid: 20ecc9176f76868429b9a3a20ed0678a
+  - enabled: 1
+    path: Assets/Scenes/SpringContraprionScene 4.unity
+    guid: 144b03643e9a24b44b7441cce53f4ae9
+  - enabled: 1
+    path: Assets/Scenes/SpringContraprionScene 5.unity
+    guid: 83f7e08ec2255c84ba1dc38624318d9c
+  - enabled: 1
+    path: Assets/Scenes/SpringContraprionScene 6.unity
+    guid: 32f55fc339dab8e40a4ceaa38429d2eb
+  - enabled: 1
+    path: Assets/Scenes/SpringContraprionScene 7.unity
+    guid: f0584e1ffdf3e1243a8b4efc9254dd99
+  - enabled: 1
+    path: Assets/Scenes/SpringContraprionScene 8.unity
+    guid: 67fd3fefb0706c74ca71dbcd7c6c346d
+  - enabled: 1
+    path: Assets/Scenes/SpringContraprionScene 9.unity
+    guid: 05d43cc93f157384abbc305a4db4c7cf
+  - enabled: 1
+    path: Assets/Scenes/SpringContraprionScene 10.unity
+    guid: 58699f425aa7f4a4bbad1587f74cd44a
+  - enabled: 1
+    path: Assets/Scenes/SpringContraprionScene 11.unity
+    guid: 32a20db4c6984af47a1d83d93a6619dd
+  - enabled: 1
+    path: Assets/Scenes/SpringContraprionScene 12.unity
+    guid: 99fc3c18bb8a85147b256ced16a15db4
+  - enabled: 1
+    path: Assets/Scenes/SpringContraprionScene 13.unity
+    guid: 2341442fb39d40c4c9acde0b8c86656d
+  - enabled: 1
+    path: Assets/Scenes/SpringContraprionScene 14.unity
+    guid: cf442f4e8e36d514787585ace8ad4644
   m_configObjects: {}
